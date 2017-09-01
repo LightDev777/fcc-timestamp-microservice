@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "index.js"
   },
+  "config" : { "port" : "7777" },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/LightDev777/fcc-timestamp-microservice.git"
