@@ -17,9 +17,13 @@ http.createServer(function(req, res) {
 
   console.log(isNaN(new Date(decodeURI(q))));
   if(typeof q === 'string' && isNaN(new Date(decodeURI(q))) !== true) {
-    result.natural = decodeURI(q);
-    var dt = new Date(decodeURI(q) + 'GMT');
-    result.unix = Date.parse(dt) / 1000;
+    //result.natural = decodeURI(q);
+    var dt1 = new Date(decodeURI(q) + 'GMT');
+    var dt1_month = monthArray[dt1.getMonth()];
+    var dt1_date = dt1.getDate() < 10 ? '0' + dt1.getDate() : dt1.getDate();
+    var dt1_year = dt1.getFullYear();
+    result.unix = Date.parse(dt1) / 1000;
+    result.natural = dt1_month + ' ' + dt1_date + ', ' + dt1_year;
   } else if(typeof q === 'number' && isNaN(new Date(Number(q)*1000)) !== true) {
     result.unix = Number(q);
     var dt2 = new Date(result.unix*1000);
