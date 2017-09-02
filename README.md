@@ -4,8 +4,8 @@
 
 <h2>Example usage:</h2>
 
-<p><code>https://timestamp-ms.herokuapp.com/December%2015,%202015</code></p>
-<p><code>https://timestamp-ms.herokuapp.com/1450137600</code></p>
+<p><code>https://fcc-timestamp-microservice-v1.herokuapp.com/December%2015,%202015</code></p>
+<p><code>https://fcc-timestamp-microservice-v1.herokuapp.com/1450137600</code></p>
 
 <h2>Example output:</h2>
 
