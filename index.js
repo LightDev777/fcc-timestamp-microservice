@@ -5,15 +5,16 @@ const monthArray = ["January", "February", "March", "April", "May", "June", "Jul
 http.createServer(function(req, res) {
 
   var objUrl = url.parse(req.url, true);//JSON.stringify(req.url);
-  //console.log(objUrl);
-  var objUrlClean = objUrl.pathname;
-  objUrlClean = objUrlClean.replace('/', '');
-  var q = eval(objUrlClean);
-  console.log(typeof q);
-  var result = {
-    "unix": 0,
-    "natural": ''
-  };
+ //console.log(objUrl);
+ var objUrlClean = objUrl.pathname;
+ objUrlClean = objUrlClean.replace('/', '');
+ var patternTest = /\D/.test(objUrlClean);
+ var q = patternTest === true ? JSON.stringify(objUrlClean) : Number(objUrlClean);
+ console.log(typeof q);
+ var result = {
+   "unix": 0,
+   "natural": ''
+ };
 
   console.log(isNaN(new Date(Number(q)*1000)));
   if(typeof q === 'string' && isNaN(new Date(decodeURI(q))) !== true) {
@@ -38,7 +39,7 @@ http.createServer(function(req, res) {
   }
 
   //console.log(res);
-  //res.write(JSON.stringify(result));
+  //res.write();
   res.end(JSON.stringify(result));
 
 
