@@ -44,7 +44,7 @@ var objUrl = url.parse(req.url, true);
     res.write(JSON.stringify(result));
 
   } else {
-    var html = '<h1>Timestamp Microservice</h1>';
+    var html = '<h1>Timestamp Microservice API</h1>';
     html += '<p>This displays or returns the unix timestamp and the natural date if you pass a string in the URL parameter.</p>';
     html += '<h2>Example usage:</h2>';
     html += '<p><code>https://timestamp-ms.herokuapp.com/December%2015,%202015</code></p>';
