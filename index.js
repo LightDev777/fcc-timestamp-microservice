@@ -51,6 +51,7 @@ var objUrl = url.parse(req.url, true);
     html += '<p><code>https://timestamp-ms.herokuapp.com/1450137600</code></p>';
     html += '<h2>Example output:</h2>';
     html += '<p><code>{ "unix": 1450137600, "natural": "December 15, 2015" }</code></p>';
+    html += '<p>Coded by: Charmie Q.</p>';
     res.write(html);
   }
 
