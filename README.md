@@ -1,10 +1,14 @@
-<p>This is a simple web application that returns the unix timestamp and the natural language of the date.</p>
+<h1>Timestamp Microservice API</h1>
 
-How to Use:
+<p>This displays or returns the unix timestamp and the natural date if you pass a string in the URL parameter.</p>
 
-Add a date of any format in the url.
+<h2>Example usage:</h2>
 
-Example cases:
+<p><code>https://timestamp-ms.herokuapp.com/December%2015,%202015</code></p>
+<p><code>https://timestamp-ms.herokuapp.com/1450137600</code></p>
 
-<code>https://fcc-timestamp-microservice-v1.herokuapp.com/January 1, 2011</code><br>
-<code>https://fcc-timestamp-microservice-v1.herokuapp.com/1450137600</code>
+<h2>Example output:</h2>
+
+<p><code>{ "unix": 1450137600, "natural": "December 15, 2015" }</code></p>
+
+<p>Coded by: Charmie Q.</p>
