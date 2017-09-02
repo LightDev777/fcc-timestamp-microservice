@@ -1,4 +1,4 @@
-This is a simple web application that returns the unix timestamp and the natural language of the date.
+<p>This is a simple web application that returns the unix timestamp and the natural language of the date.</p>
 
 How to Use:
 
