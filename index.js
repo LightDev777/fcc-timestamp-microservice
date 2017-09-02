@@ -5,7 +5,7 @@ var app = express();
 const monthArray = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 http.createServer(function(req, res) {
-  
+
 var objUrl = url.parse(req.url, true);
 
  if(objUrl.pathname.length > 1) {
@@ -45,7 +45,7 @@ var objUrl = url.parse(req.url, true);
 
   } else {
     var html = '<h1>Timestamp Microservice</h1>';
-    html += '<p>This displays or returns the unix timestamp and the natural language of the date passed in the URL</p>';
+    html += '<p>This displays or returns the unix timestamp and the natural date if you pass a string in the URL parameter.</p>';
     html += '<h2>Example usage:</h2>';
     html += '<p><code>https://timestamp-ms.herokuapp.com/December%2015,%202015</code></p>';
     html += '<p><code>https://timestamp-ms.herokuapp.com/1450137600</code></p>';
